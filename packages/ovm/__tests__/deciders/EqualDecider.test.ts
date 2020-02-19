@@ -26,4 +26,12 @@ describe('EqualDecider', () => {
 
     expect(decision.outcome).toBeFalsy()
   })
+
+  test('return decision with debugInfo', async () => {
+    const decision = await decider.decide(deciderManager, [
+      Coder.encode(BigNumber.from(1))
+    ])
+
+    expect(decision.outcome).toBeFalsy()
+  })
 })
